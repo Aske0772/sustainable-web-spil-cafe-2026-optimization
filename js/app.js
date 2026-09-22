@@ -190,7 +190,7 @@ function showGameModal(id) {
   `;
 
   document.querySelector("#game-dialog").showModal();
-  document.querySelector("#title-dialog").focus();
+  document.querySelector("#dialog-title").focus();
 }
 
 // Luk dialog på klik af X
