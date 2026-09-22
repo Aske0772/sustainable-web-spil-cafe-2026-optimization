@@ -169,7 +169,7 @@ function showGameModal(id) {
 
     <img src="${game.image}" alt="${game.title}" class="game-image" />
     <div class="dialog-details">
-      <h2 ${getTitleLangAttr(game.title)}>${game.title}</h2>
+      <h2 id="dialog-title" tabindex="-1" ${getTitleLangAttr(game.title)}>${game.title}</h2>
 
       <div class="dialog-tags">
       <p class="game-category">${game.genre}</p>
@@ -190,6 +190,7 @@ function showGameModal(id) {
   `;
 
   document.querySelector("#game-dialog").showModal();
+  document.querySelector("#title-dialog").focus();
 }
 
 // Luk dialog på klik af X
