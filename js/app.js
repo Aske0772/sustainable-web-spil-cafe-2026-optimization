@@ -98,7 +98,7 @@ function displayGame(game) {
   if (!gameList) return;
 
   const gameHTML = `
-    <article class="game-card" tabindex="0" data-id="${game.id}">
+    <article class="game-card" data-id="${game.id}">
         <section class="top-card">
             <img src="${game.image}" 
             alt="${game.title}" 
