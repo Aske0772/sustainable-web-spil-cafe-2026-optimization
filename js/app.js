@@ -108,7 +108,7 @@ function displayGame(game) {
             <div class="difficulty-tag">${game.difficulty}</div>
         </section>
         <section class="bottom-card">
-            <h2 class="card-titel" ${getTitleLangAttr(game.title)}>${game.title}</h2>
+            <h2 class="card-titel"><button type="button" class="card-open-btn" ${getTitleLangAttr(game.title)}>${game.title}</button></h2>
             <div class="tags">
                 <p>${game.genre}</p>
             </div>
