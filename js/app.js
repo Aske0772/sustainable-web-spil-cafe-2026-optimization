@@ -58,6 +58,13 @@ if (searchInput) {
 
 let allGames = [];
 
+// sørger for at engelske spil henter en som sprog og ikke da
+const englishTitle = new Set (["Sequence", "Ticket to Ride: Europe", "Pandemic", "Dixit", "Codenames", "7 Wonders", "Scrabble"]);
+
+function getTitleLangAttr(title) {
+  return englishTitle.has(title) ? 'lang="en"' : "";
+}
+
 // #2: Fetch games from JSON file
 async function getGames() {
   const response = await fetch("../data/games.json");
@@ -85,6 +92,7 @@ function displayGames(games) {
 }
 
 // #4: Render a single game card and add event listeners
+// h2 class - ${getTitleLangAttr} henter titler med en og ændre lang fra da til en
 function displayGame(game) {
   const gameList = document.querySelector(".game-list-all");
   if (!gameList) return;
@@ -100,7 +108,7 @@ function displayGame(game) {
             <div class="difficulty-tag">${game.difficulty}</div>
         </section>
         <section class="bottom-card">
-            <h2 class="card-titel">${game.title}</h2>
+            <h2 class="card-titel" ${getTitleLangAttr(game.title)}>${game.title}</h2>
             <div class="tags">
                 <p>${game.genre}</p>
             </div>
@@ -161,7 +169,7 @@ function showGameModal(id) {
 
     <img src="${game.image}" alt="${game.title}" class="game-image" />
     <div class="dialog-details">
-      <h2>${game.title}</h2>
+      <h2 ${getTitleLangAttr(game.title)}>${game.title}</h2>
 
       <div class="dialog-tags">
       <p class="game-category">${game.genre}</p>
