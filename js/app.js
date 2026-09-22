@@ -301,3 +301,4 @@ function showVestergadeGames() {
   displayGames(filtered);
   return Promise.resolve(filtered);
 }
+
