@@ -170,15 +170,14 @@ function showGameModal(id) {
     <img src="${game.image}" alt="" class="game-image" />
     <div class="dialog-details">
       <h2 id="dialog-title" tabindex="-1" ${getTitleLangAttr(game.title)}>${game.title}</h2>
-      </div class="dialog-tags">
       <p class="game-category">${game.genre}</p>
       <p class="game-rating">☆ ${game.rating}</p>
       <p>${game.playtime} min</p>
       <p>${game.players.min}-${game.players.max}</p>
       <p>${game.age}+</p>
-      <p></strong> ${game.difficulty}</p>
+      <p>${game.difficulty}</p>
       <p>${game.language}</p>
-      <p>${game.location}, hylde ${game.shelf}</p>
+      <p>hylde: ${game.shelf}</p>
       <p class="game-description">${game.rules}</p>
     </div> 
   
@@ -283,24 +282,3 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelector("#playtime-select")
     .addEventListener("change", filterGames);
 });
-
-//Vestergade spilgalleri
-function showVestergadeGames() {
-  if (!allGames || allGames.length === 0) {
-    return getGames().then(() => {
-      showVestergadeGames();
-      const filtered = allGames.filter(
-        (g) => g.location && g.location.toLowerCase().trim() === "verstergade"
-      );
-      displayGames(filtered);
-      return filtered;
-    });
-  }
-
-  const filtered = allGames.filter(
-    (g) => g.location && g.location.toLowerCase().trim() === "verstergade"
-  );
-  displayGames(filtered);
-  return Promise.resolve(filtered);
-}
-
