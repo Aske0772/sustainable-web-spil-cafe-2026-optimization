@@ -28,7 +28,7 @@
     "rating": 4.1,
     "age": 6,
     "difficulty": "Let",
-    "location": "Fredensgade",
+    "location": "Vestergade",
     "shelf": "B7",
     "available": true,
     "rules": "Hver spiller skal få sine fire brikker hele vejen rundt på brættet. Du skal slå en sekser for at komme ud, og modstandere kan slå dine brikker hjem. Vinderen er den, der først får alle brikker i mål. Brikker starter i hver spilers hjørne og skal rundt om hele brættet. Hvis du lander på samme felt som en modstander, slås deres brik hjem til start. Du får en ekstra tur hvis du slår en sekser."
@@ -45,7 +45,7 @@
     "rating": 4.3,
     "age": 7,
     "difficulty": "Let",
-    "location": "Aalborg",
+    "location": "Vestergade",
     "shelf": "C4",
     "available": false,
     "rules": "Spillerne skiftes til at lægge kort, der matcher farve eller tal. Specialkort kan ændre spillets gang. Den første, der kommer af med alle sine kort, vinder. Start med 7 kort per spiller. Træk-to kort tvinger næste spiller til at trække kort. Spring-over kort springer en spiller over. Vendekort ændrer spilleretningen. Vildkort kan bruges som enhver farve. Husk at sige 'UNO' når du har ét kort tilbage!"
@@ -62,7 +62,7 @@
     "rating": 4.2,
     "age": 8,
     "difficulty": "Let",
-    "location": "Kolding",
+    "location": "Vestergade",
     "shelf": "D9",
     "available": true,
     "rules": "Spillerne danner hold på to og hjælper hinanden med at få alle brikker i mål. Kort bruges til at rykke og blokere modstandere. Holdet, der først får alle brikker i mål, vinder. Hver spiller har 4 brikker der skal rundt om brættet. Partnerne sidder overfor hinanden og kan hjælpe med at få hinandens brikker i mål. Brug kortene strategisk til at beskytte egne brikker og blokere modstanderne."
@@ -96,7 +96,7 @@
     "rating": 4.8,
     "age": 8,
     "difficulty": "Mellem",
-    "location": "Fredensgade",
+    "location": "Vestergade",
     "shelf": "F6",
     "available": false,
     "rules": "Spillerne styrer hver deres hær af brikker med unikke bevægelser. Målet er at sætte modstanderens konge skakmat. Spillet kræver planlægning og strategi. Hver briktype har sine egne regler: tårnet flytter i lige linjer, løberen diagonalt, springeren i L-form. Kongen kan kun flytte ét felt ad gangen. Specialtræk inkluderer rokade og en passant. Planlæg flere træk frem og beskyt din konge."
@@ -113,7 +113,7 @@
     "rating": 4.0,
     "age": 8,
     "difficulty": "Mellem",
-    "location": "Aalborg",
+    "location": "Vestergade",
     "shelf": "G3",
     "available": true,
     "rules": "Spillerne flytter deres brikker rundt på brættet efter terningekast. Du kan slå modstanderens brikker tilbage til start. Vinderen er den, der først får alle sine brikker hjem. Brug dobbelttræk strategisk og byg barrierer for at blokere modstanderen. Brikker på samme punkt danner en barrierer som ikke kan slås. Spillet kræver både held og strategi for at vinde."
@@ -130,7 +130,7 @@
     "rating": 4.1,
     "age": 8,
     "difficulty": "Let",
-    "location": "Kolding",
+    "location": "Vestergade",
     "shelf": "H8",
     "available": true,
     "rules": "Spillerne køber og udvikler ejendomme. Når andre lander på dine felter, betaler de leje. Målet er at ruinere modstanderne og stå tilbage som den rigeste. Køb hele farvegruppeer for at kunne bygge huse og hoteller. Jo flere bygninger, jo højere leje. Særlige felter giver chancer og fællesskabskort som kan ændre spillet. Forhandl og lav aftaler med andre spillere."
@@ -164,7 +164,7 @@
     "rating": 4.3,
     "age": 10,
     "difficulty": "Mellem",
-    "location": "Fredensgade",
+    "location": "Vestergade",
     "shelf": "J4",
     "available": true,
     "rules": "Målet er verdensherredømme. Spillerne flytter hære, angriber og forsvarer områder. Terningekast afgør slagene, men strategi er afgørende. Start med at placere dine hære strategisk på kontinenterne. Angrib nabolande for at udvide dit territorium. Saml kontinentbonusser for ekstra forstærkninger. Brug missionskort til alternative sejrsbetingelser. Allianser kan være nyttige, men husk at der kun kan være én vinder!"
@@ -181,7 +181,7 @@
     "rating": 4.0,
     "age": 8,
     "difficulty": "Mellem",
-    "location": "Aalborg",
+    "location": "Vestergade",
     "shelf": "K7",
     "available": true,
     "rules": "Hver spiller placerer hemmeligt sine brikker på brættet. Målet er at erobre modstanderens flag. Spillet kombinerer bluff og strategi. Brikker har forskellige styrker fra 1 (spion) til 10 (marshal). Bomber kan ikke flyttes men ødelægger enhver brik undtagen spioner. Kun spioen kan fjerne bomber. Spejdere kan flytte flere felter og er gode til at afsløre fjendens opstilling."
@@ -198,7 +198,7 @@
     "rating": 4.1,
     "age": 8,
     "difficulty": "Let",
-    "location": "Kolding",
+    "location": "Vestergade",
     "shelf": "L1",
     "available": false,
     "rules": "Spillerne skal finde ud af, hvem morderen er, hvilket våben blev brugt, og i hvilket rum. Ved at stille spørgsmål og eliminere muligheder, findes løsningen. Rul terningen for at bevæge dig rundt i huset og kom ind i forskellige rum. Stil forslag om mordets omstændigheder og se hvilke kort andre spillere har. Noteér hvad du lærer for at indsnævre mulighederne. Den første til at løse mysteriet vinder!"
@@ -232,7 +232,7 @@
     "rating": 4.4,
     "age": 8,
     "difficulty": "Let",
-    "location": "Fredensgade",
+    "location": "Vestergade",
     "shelf": "N6",
     "available": true,
     "rules": "Spillerne samler togvogne og bygger ruter mellem byer i Europa. Længere ruter giver flere point, og hemmelige billetkort afgør sejr. Saml kort i samme farve for at bygge jernbaneruter på brættet. Hver rute har en specifik længde og farve. Opfyld dine destinationskort for bonuspoint, men pas på - ufuldførte ruter giver minuspoint! Tunneller og færger har særlige regler."
@@ -249,7 +249,7 @@
     "rating": 4.2,
     "age": 7,
     "difficulty": "Let",
-    "location": "Aalborg",
+    "location": "Vestergade",
     "shelf": "O9",
     "available": true,
     "rules": "Spillerne lægger fliser for at bygge landskaber. Følgere kan placeres som riddere, bønder eller munke. Point gives for færdiggjorte byer, veje og marker. Hver tur trækker du en flise og placerer den så den matcher det eksisterende landskab. Derefter kan du placere en følger som klostermunk, ridder på en by eller bonde på en mark. Point tælles når strukturer færdiggøres. Marker giver point til sidst baseret på tilstødende byer."
@@ -266,7 +266,7 @@
     "rating": 4.3,
     "age": 10,
     "difficulty": "Mellem",
-    "location": "Kolding",
+    "location": "Vestergade",
     "shelf": "P4",
     "available": false,
     "rules": "Spillerne samarbejder som specialister, der bekæmper globale sygdomsudbrud. De skal helbrede alle sygdomme, inden tiden løber ud. Hver spiller har en unik rolle med særlige evner. Arbejd sammen for at behandle smittede byer, bygge forskningsstationer og finde kur til de fire sygdomme. Epidemic-kort accelererer spredningen, så planlæg jeres handlinger nøje. I taber eller vinder sammen!"
@@ -300,7 +300,7 @@
     "rating": 4.1,
     "age": 8,
     "difficulty": "Let",
-    "location": "Fredensgade",
+    "location": "Vestergade",
     "shelf": "R5",
     "available": true,
     "rules": "Fortælleren vælger et kort og giver et hint. De andre spiller kort, og alle gætter på fortællerens kort. Point afhænger af, hvor mange der gætter rigtigt. Fortælleren skal give et hint der får nogle, men ikke alle, til at gætte rigtigt. Alle andre spillere vælger et kort fra deres hånd der passer til hintet. Gæt på hvilket kort der var fortællerens. For mange eller for få rigtige gæt giver fortælleren ingen point!"
@@ -317,7 +317,7 @@
     "rating": 4.0,
     "age": 10,
     "difficulty": "Let",
-    "location": "Aalborg",
+    "location": "Vestergade",
     "shelf": "S3",
     "available": true,
     "rules": "To hold kæmper om at gætte deres ord på bordet først. En spymaster giver et enkelt ord som hint, og holdet forsøger at gætte uden at ramme modstanderens eller snigmorderkortet. Spymaster kender alle ordenes tilhørsforhold og giver hints der forbinder flere af holdets ord. Holdmedlemmerne diskuterer og gætter baseret på hintet. Pas på snigmorderen - hvis I rammer det kort, taber I øjeblikkeligt! Første hold til at finde alle deres ord vinder."
@@ -334,7 +334,7 @@
     "rating": 4.4,
     "age": 10,
     "difficulty": "Mellem",
-    "location": "Kolding",
+    "location": "Vestergade",
     "shelf": "T2",
     "available": true,
     "rules": "Spillerne vælger kort gennem tre tidsaldre for at bygge strukturer og undere. Ressourcestyring og strategi er afgørende for at samle flest sejrspoint. Bygningskort giver ressourcer, militærstyrke eller videnskabssymboler. Handl med naboerne eller betal banken for ressourcer du mangler. Militærkonflikter med naboer giver sejrs- eller nederlags-tokens. Saml videnskabssymboler for store bonusser og byg dit civilisations vidunder!"
