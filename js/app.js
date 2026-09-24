@@ -200,8 +200,7 @@ document.querySelector("#close-dialog").addEventListener("click", () => {
 
 // Dropdown-menu //// Åbn/luk dropdowns
 
-// Load games on page load
-document.addEventListener("DOMContentLoaded", getGames);
+
 
 // FILTRERINGSSYSTEM //
 
