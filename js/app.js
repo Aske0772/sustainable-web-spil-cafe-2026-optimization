@@ -188,9 +188,9 @@ function showGameModal(id) {
     </div> 
   
   `;
-
+  
   document.querySelector("#game-dialog").showModal();
-  document.querySelector("#dialog-title").focus();
+  requestAnimationFrame(() => document.querySelector("#dialog-title").focus());
 }
 
 // Luk dialog på klik af X
