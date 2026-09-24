@@ -188,7 +188,7 @@ function showGameModal(id) {
     </div> 
   
   `;
-  
+
   document.querySelector("#game-dialog").showModal();
   requestAnimationFrame(() => document.querySelector("#dialog-title").focus());
 }
@@ -199,7 +199,6 @@ document.querySelector("#close-dialog").addEventListener("click", () => {
 });
 
 // Dropdown-menu //// Åbn/luk dropdowns
-
 
 
 // FILTRERINGSSYSTEM //
