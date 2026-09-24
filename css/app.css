@@ -50,6 +50,8 @@
   z-index: 1;
 }
 
+
+
 /* kort Btn. border styling */
 .card-open-btn {
   background: none;
@@ -60,27 +62,6 @@
   color: inherit;
   text-align: left;
   cursor: pointer;
-}
-
-/* Tags */
-.tags {
-  padding: 8px 4px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 16px;
-  border: 0.5px solid var(--tag-border-color);
-  background: var(--tag-background-color);
-  box-shadow: var(--shadow);
-  height: 15px;
-}
-
-.tags p {
-  font-family: var(--tag-font-family);
-  font-size: var(--tag-fontsize);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 15px;
-  letter-spacing: -0.11px;
 }
 
 /* Øvre card */
@@ -202,18 +183,6 @@
   font-size: var(--card-fontsize-header-1);
   margin: 0;
   padding: 0;
-}
-
-.tags {
-  display: flex;
-  padding: 4px 8px;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  border-radius: 16px;
-  border: 0.5px solid var(--tag-border-color);
-  background: var(--card-background-color);
-  box-shadow: var(--shadow);
 }
 
 /* FORSIDE */
@@ -641,4 +610,33 @@ main {
 
 footer {
   font-family: var(--paragraph-font-family);
+}
+
+/* Cards tag - before opening */
+
+
+/* Tag rules for CARDS non-dialog front page */
+.tag-list { 
+list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 16px;
+  border: 0.5px solid var(--tag-border-color);
+  background: var(--card-background-color);
+  box-shadow: var(--shadow);
+  font-family: var(--tag-font-family);
+  font-size: var(--tag-fontsize);
+  font-weight: 700;
+  letter-spacing: -0.11px;
+}
+
+.card-description {
+  font-family: var(--paragraph-font-family);
+  font-size: 14px;
+  margin: 8px 0 0;
 }

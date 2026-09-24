@@ -98,31 +98,24 @@ function displayGame(game) {
   if (!gameList) return;
 
   const gameHTML = `
-    <article class="game-card" data-id="${game.id}">
-        <section class="top-card">
-            <img src="${game.image}" 
-            alt="" 
-            class="game-image" />
-            <div class="age-tag">${game.age}</div>
-            <div class="rating-tag">${game.rating}</div>
-            <div class="difficulty-tag">${game.difficulty}</div>
-        </section>
-        <section class="bottom-card">
-            <h2 class="card-titel"><button type="button" class="card-open-btn" ${getTitleLangAttr(game.title)}>${game.title}</button></h2>
-            <div class="tags">
-                <p>${game.genre}</p>
-            </div>
-            <div class="tags">
-                <p>${game.playtime}</p>
-            </div>
-            <div class="tags">
-                <p>${game.players.min}-${game.players.max}</p>
-            </div>
-            <div class="tags">
-                <p>${game.language}</p>
-            </div>
-        </section>
-    </article>
+ <article class="game-card" data-id="${game.id}">
+  <div class="top-card">
+    <img src="${game.image}" alt="" class="game-image" />
+  </div>
+  <div class="bottom-card">
+    <h2 class="card-titel"><button type="button" class="card-open-btn" ${getTitleLangAttr(game.title)}>${game.title}</button></h2>
+    <ul class="tag-list" role="list">
+      <li class="tags">${game.age}+ år</li>
+      <li class="tags">${game.rating}</li>
+      <li class="tags">${game.difficulty}</li>
+      <li class="tags">${game.genre}</li>
+      <li class="tags">${game.playtime} min</li>
+      <li class="tags">${game.players.min}–${game.players.max} spillere</li>
+      <li class="tags">${game.language}</li>
+    </ul>
+    <p class="card-description">${game.description}</p>
+  </div>
+</article>
   `;
   gameList.insertAdjacentHTML("beforeend", gameHTML);
 
@@ -282,3 +275,4 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelector("#playtime-select")
     .addEventListener("change", filterGames);
 });
+
