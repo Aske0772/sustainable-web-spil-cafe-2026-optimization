@@ -101,7 +101,7 @@ function displayGame(game) {
     <article class="game-card" data-id="${game.id}">
         <section class="top-card">
             <img src="${game.image}" 
-            alt="${game.title}" 
+            alt="" 
             class="game-image" />
             <div class="age-tag">${game.age}</div>
             <div class="rating-tag">${game.rating}</div>
