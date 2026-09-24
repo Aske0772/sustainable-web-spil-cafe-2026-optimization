@@ -167,7 +167,7 @@ function showGameModal(id) {
 
   document.querySelector("#dialog-content").innerHTML = /*html*/ `
 
-    <img src="${game.image}" alt="${game.title}" class="game-image" />
+    <img src="${game.image}" alt="" class="game-image" />
     <div class="dialog-details">
       <h2 id="dialog-title" tabindex="-1" ${getTitleLangAttr(game.title)}>${game.title}</h2>
 
