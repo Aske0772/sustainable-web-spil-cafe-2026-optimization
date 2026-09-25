@@ -112,6 +112,7 @@ function displayGame(game) {
       <li class="tags">${game.playtime} min</li>
       <li class="tags">${game.players.min}–${game.players.max} spillere</li>
       <li class="tags">${game.language}</li>
+      <li class="tags">${game.shelf}</li>
     </ul>
     <p class="card-description">${game.description}</p>
   </div>
