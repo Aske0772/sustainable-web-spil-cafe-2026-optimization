@@ -19,7 +19,7 @@
     "id": 2,
     "title": "Ludo",
     "description": "Familiespil med terninger og brikker.",
-    "image": "https://www.hyggeonkel.dk/static/grafik/single-pages/overblik-dk/ludo.png",
+    "image": "../img/img-optimized-720-webp/ludo-720.webp",
     "genre": "Familie",
     "playtime": 30,
     "players": { "min": 2, "max": 4 },
