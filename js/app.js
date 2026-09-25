@@ -276,5 +276,17 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelector("#playtime-select")
     .addEventListener("change", filterGames);
+
+  const filterDialog = document.querySelector("#filter-dialog");
+  document.querySelector("#open-filter").addEventListener("click", () => {
+    filterDialog.showModal();
+  });
+
+  document.querySelector("#reset-filter").addEventListener("click", () => {
+    document.querySelectorAll("#filter-dialog select").forEach((select) => {
+      select.value = "all";
+    });
+    filterGames();
 });
 
+});

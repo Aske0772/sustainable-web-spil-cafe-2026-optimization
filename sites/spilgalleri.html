@@ -20,66 +20,80 @@
       <input type="search" id="search-input" placeholder="f.eks. skak">
     </div>
     </header>
-    
-    <section class="filter-bar">  
-    <div class="filter-group">
-      <label for="difficulty-select"></label>
-      <select id="difficulty-select">
-        <option value="all">Sværhedsgrad</option>
-        <option value="Let">Let</option>
-        <option value="Mellem">Mellem</option>
-        <option value="Svær">Svær</option>
-      </select>
-    </div>
-    
-    <div class="filter-group">
-      <label for="age-select"></label>
-      <select id="age-select">
-        <option value="all">Alder</option>
-        <option value="6">6+</option>
-        <option value="7">7+</option>
-        <option value="8">8+</option>
-        <option value="10">10+</option>
-        <option value="18">18+</option>
-      </select>
+  
+    <div class="filter-bar">
+      <button type="button" id="open-filter">Filtrer</button>
     </div>
 
-    <div class="filter-group">
-      <label for="genre-select"></label>
-      <select id="genre-select">
-      <option value="all">Genrer</option>
-      <option value="Party">Party</option>
-      <option value="Mysterie">Mysterie</option>
-      <option value="Familie">Børne-/Familie</option>
-      <option value="Deck-builder">Deck-builder</option>
-      <option value="Quiz">Quiz</option>
-      <option value="Terning">Terning</option>
-      <option value="Kooperativt">Kooperativt</option>
-      <option value="Abstract">Abstract</option>
-      <option value="Ordspil">Ordspil</option>
-      <option value="Kortspil">Kortspil</option>
-      <option value="Strategi">Strategi</option>
-      <option value="Fliselægning">Fliselægning</option>
-      </select>
+    <dialog id="filter-dialog" aria-labelledby="filter-title">
+      
+      <form method="dialog">
+        <button aria-label="Luk filter">Luk</button>
+        <h2 id="filter-title">Filtrer spil</h2>
+
+        <div class="filter-group">
+        <label for="difficulty-select">Sværhedsgrad</label>
+        <select id="difficulty-select">
+          <option value="all">Alle</option>
+          <option value="Let">Let</option>
+          <option value="Mellem">Mellem</option>
+          <option value="Svær">Svær</option>
+        </select>
+        </div>
+
+        <div class="filter-group">
+        <label for="age-select">Alder</label>
+        <select id="age-select">
+          <option value="all">Alle</option>
+          <option value="6">6+</option>
+          <option value="7">7+</option>
+          <option value="8">8+</option>
+          <option value="10">10+</option>
+          <option value="18">18+</option>
+        </select>
+        </div>
+      
+      <div class="filter-group">
+        <label for="genre-select">Genre</label>
+        <select id="genre-select">
+          <option value="all">Alle</option>
+          <option value="Party">Party</option>
+          <option value="Mysterie">Mysterie</option>
+          <option value="Familie">Børne-/Familie</option>
+          <option value="Deck-builder">Deck-builder</option>
+          <option value="Quiz">Quiz</option>
+          <option value="Terning">Terning</option>
+          <option value="Kooperativt">Kooperativt</option>
+          <option value="Abstract">Abstract</option>
+          <option value="Ordspil">Ordspil</option>
+          <option value="Kortspil">Kortspil</option>
+          <option value="Strategi">Strategi</option>
+          <option value="Fliselægning">Fliselægning</option>
+        </select>
       </div>
 
-    <div class="filter-group">
-      <label for="playtime-select"></label>
-      <select id="playtime-select">
-        <option value="all">Spilletid</option>
-        <option value="15">15+ min</option>
-        <option value="20">20+ min</option>
-        <option value="30">30+ min</option>
-        <option value="35">35+ min</option>
-        <option value="40">40+ min</option>
-        <option value="45">45+ min</option>
-        <option value="60">60+ min</option>
-        <option value="75">75+ min</option>
-        <option value="120">120+ min</option>
-      </select>
-    </div>
-    </div>
-    </section>
+      <div class="filter-group">
+        <label class="filter-group" for="playtime-select">Spilletid</label>
+        <select id="playtime-select">
+          <option value="all">Alle</option>
+          <option value="15">15+ min</option>
+          <option value="20">20+ min</option>
+          <option value="30">30+ min</option>
+          <option value="35">35+ min</option>
+          <option value="40">40+ min</option>
+          <option value="45">45+ min</option>
+          <option value="60">60+ min</option>
+          <option value="75">75+ min</option>
+          <option value="120">120+ min</option> 
+        </select>
+      </div>
+
+      <p class="result-count" role="status"></p>
+
+      <button type="button" id="reset-filter">Nulstil filtre</button>
+      <button>Vis Spil</button>
+    </form>
+  </dialog>
 
     <main class="main-content">
       <!--Vestergade spil sektion-->
@@ -88,7 +102,8 @@
           <!-- Spilcards bliver indsat her via JS -->
       
       </section>
-        
+  
+      <p class="result-count" role="status"></p>
       <!--Alle spil sektion-->
 
     <section class="game-list-all"></section>
