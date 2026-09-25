@@ -174,7 +174,11 @@ function showGameModal(id) {
         <li>Sprog: ${game.language}</li>
         <li>Hylde: ${game.shelf}</li>
       </ul>
+      <h3>Om spillet</h3>
+      <details>
+      <summary>Vis regler</summary>
       <p class="game-description">${game.rules}</p>
+      </details>
     </div>
   
   `;
