@@ -175,9 +175,10 @@ function showGameModal(id) {
         <li>Hylde: ${game.shelf}</li>
       </ul>
       <h3>Om spillet</h3>
+      <p class="game-description">${game.description}</p>
       <details>
       <summary>Vis regler</summary>
-      <p class="game-description">${game.rules}</p>
+      <p class="game-rules">${game.rules}</p>
       </details>
     </div>
   
