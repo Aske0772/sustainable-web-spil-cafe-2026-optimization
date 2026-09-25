@@ -163,16 +163,18 @@ function showGameModal(id) {
     <img src="${game.image}" alt="" class="game-image" />
     <div class="dialog-details">
       <h2 id="dialog-title" tabindex="-1" ${getTitleLangAttr(game.title)}>${game.title}</h2>
-      <p class="game-category">${game.genre}</p>
-      <p class="game-rating">☆ ${game.rating}</p>
-      <p>${game.playtime} min</p>
-      <p>${game.players.min}-${game.players.max}</p>
-      <p>${game.age}+</p>
-      <p>${game.difficulty}</p>
-      <p>${game.language}</p>
-      <p>hylde: ${game.shelf}</p>
+      <ul class="tag-list" role="list">
+        <li class="game-category">Genre: ${game.genre}</li>
+        <li class="game-rating">Bedømmelse: ${game.rating} af 5 stjerner</li>
+        <li>Spilletid: ${game.playtime} min</li>
+        <li>Spillere: ${game.players.min}–${game.players.max}</li>
+        <li>Alder: ${game.age}+ år</li>
+        <li>Sværhedsgrad: ${game.difficulty}</li>
+        <li>Sprog: ${game.language}</li>
+        <li>Hylde: ${game.shelf}</li>
+      </ul>
       <p class="game-description">${game.rules}</p>
-    </div> 
+    </div>
   
   `;
 
