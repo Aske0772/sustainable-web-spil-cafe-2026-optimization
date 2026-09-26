@@ -152,15 +152,15 @@ function showGameModal(id) {
     <img src="${game.image}" alt="" class="game-image" />
     <div class="dialog-details">
       <h2 id="dialog-title" tabindex="-1" ${getTitleLangAttr(game.title)}>${game.title}</h2>
-      <ul class="tag-list" role="list">
-        <li class="game-category">Genre: ${game.genre}</li>
-        <li class="game-rating">Bedømmelse: ${game.rating}/5</li>
-        <li>Spilletid: ${game.playtime} min</li>
-        <li>Spillere: ${game.players.min}–${game.players.max}</li>
-        <li>Alder: ${game.age}+ år</li>
-        <li>Sværhedsgrad: ${game.difficulty}</li>
-        <li>Sprog: ${game.language}</li>
-        <li>Hylde: ${game.shelf}</li>
+      <ul class="fact-list" role="list">
+        <li><span class="fact-label">Genre</span> ${game.genre}</li>
+        <li><span class="fact-label">Alder</span> ${game.age}+ år</li>
+        <li><span class="fact-label">Spilletid</span> ${game.playtime} min</li>
+        <li><span class="fact-label">Sværhedsgrad</span> ${game.difficulty}</li>
+        <li><span class="fact-label">Spillere</span> ${game.players.min}–${game.players.max}</li>
+        <li><span class="fact-label">Bedømmelse</span> ${game.rating}/5</li>
+        <li><span class="fact-label">Sprog</span> ${game.language}</li>
+        <li><span class="fact-label">Hylde</span> ${game.shelf}</li>
       </ul>
       <h3>Om spillet</h3>
       <p class="game-description">${game.description}</p>
