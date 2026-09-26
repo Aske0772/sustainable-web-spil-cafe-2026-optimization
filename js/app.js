@@ -247,7 +247,7 @@ function filterGames() {
   }
 
   // Vis de filtrerede spil på siden
-  const message = filteredGames.length === 0 ? "Ingen spil matcher, nustil filtrene og prøv igen" : `${filteredGames.length} spil fundet`;
+  const message = filteredGames.length === 0 ? "Ingen spil matcher, nulstil filtrene og prøv igen" : `${filteredGames.length} spil fundet`;
   document.querySelectorAll(".result-count").forEach((p) => (p.textContent = message));
   
   displayGames(filteredGames);
