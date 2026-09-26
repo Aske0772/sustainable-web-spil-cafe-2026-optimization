@@ -129,20 +129,6 @@ function showGameDetails(game) {
   `);
 }
 
-//Game Card Dialog
-function getDifficultyClass(difficulty) {
-  switch (difficulty.toLowerCase()) {
-    case "let":
-      return "difficulty-easy";
-    case "mellem":
-      return "difficulty-medium";
-    case "svær":
-      return "difficulty-hard";
-    default:
-      return "";
-  }
-}
-
 function showGameModal(id) {
   const game = allGames.find((g) => g.id == id);
   if (!game) return;

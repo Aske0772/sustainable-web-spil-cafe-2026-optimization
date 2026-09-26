@@ -623,7 +623,6 @@ footer {
 
 /* Cards tag - before opening */
 
-
 /* Tag rules for CARDS non-dialog front page */
 .tag-list { 
 list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px;
@@ -649,3 +648,76 @@ list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4p
   font-size: 14px;
   margin: 8px 0 0;
 }
+
+/* Cards dialog */
+
+/* Close btn for dialog */
+#close-dialog {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid #88786b;
+  border-radius: 24px;
+  background: #f8f5f0;
+  color: #3c342f;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 2 boxes for fact-list */
+.fact-list {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+/* Fact-list styling */
+.fact-list li {
+  padding: 11px 13px;
+  background: #eee8df;
+  border: 1px solid #d9cfc3;
+  border-radius: 10px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #3c342f;
+}
+
+/* styling for factlabel */
+.fact-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #665b52;
+}
+
+/* About / Rules for game */
+#game-dialog summary {
+  min-height: 48px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: #bc201f;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.game-rules {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* outline Styling for dialog and close dialog */
+#close-dialog:focus-visible,
+#game-dialog summary:focus-visible {
+  outline: 3px solid #3c342f;
+  outline-offset: 4px;
+}
+
+
