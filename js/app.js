@@ -74,12 +74,6 @@ function displayGames(games) {
   if (!gameList) return;
   gameList.innerHTML = "";
 
-  if (games.length === 0) {
-    gameList.innerHTML =
-      '<p class="no-results">Ingen spil matchede dine filtre 😢</p>';
-    return;
-  }
-
   for (const game of games) {
     displayGame(game);
   }
@@ -100,13 +94,13 @@ function displayGame(game) {
     <h2 class="card-titel"><button type="button" class="card-open-btn" ${getTitleLangAttr(game.title)}>${game.title}</button></h2>
     <ul class="tag-list" role="list">
       <li class="tags">${game.age}+ år</li>
-      <li class="tags">${game.rating}</li>
-      <li class="tags">${game.difficulty}</li>
-      <li class="tags">${game.genre}</li>
-      <li class="tags">${game.playtime} min</li>
-      <li class="tags">${game.players.min}–${game.players.max} spillere</li>
-      <li class="tags">${game.language}</li>
-      <li class="tags">${game.shelf}</li>
+      <li class="tags">bedømmelse ${game.rating}/5</li>
+      <li class="tags">Sværhedsgrad ${game.difficulty}</li>
+      <li class="tags">Genre ${game.genre}</li>
+      <li class="tags">Spilletid ${game.playtime} min</li>
+      <li class="tags">Spillere ${game.players.min}–${game.players.max}</li>
+      <li class="tags">Sprog ${game.language}</li>
+      <li class="tags">Hylde ${game.shelf}</li>
     </ul>
     <p class="card-description">${game.description}</p>
   </div>
@@ -160,7 +154,7 @@ function showGameModal(id) {
       <h2 id="dialog-title" tabindex="-1" ${getTitleLangAttr(game.title)}>${game.title}</h2>
       <ul class="tag-list" role="list">
         <li class="game-category">Genre: ${game.genre}</li>
-        <li class="game-rating">Bedømmelse: ${game.rating} af 5 stjerner</li>
+        <li class="game-rating">Bedømmelse: ${game.rating}/5</li>
         <li>Spilletid: ${game.playtime} min</li>
         <li>Spillere: ${game.players.min}–${game.players.max}</li>
         <li>Alder: ${game.age}+ år</li>
@@ -253,6 +247,9 @@ function filterGames() {
   }
 
   // Vis de filtrerede spil på siden
+  const message = filteredGames.length === 0 ? "Ingen spil matcher, nustil filtrene og prøv igen" : `${filteredGames.length} spil fundet`;
+  document.querySelectorAll(".result-count").forEach((p) => (p.textContent = message));
+  
   displayGames(filteredGames);
 }
 
