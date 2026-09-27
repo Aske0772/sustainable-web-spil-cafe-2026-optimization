@@ -115,20 +115,6 @@ function displayGame(game) {
   });
 }
 
-// #6: Vis game details (Session 3 version - bliver erstattet med modal i Del 2)
-function showGameDetails(game) {
-  alert(`
-🎬 ${games.title} (${game.year})
-
-🎭 Genre: ${games.genre.join(", ")}
-⭐ Rating: ${games.rating}
-🎥 Director: ${games.director}
-👥 Actors: ${games.actors.join(", ")}
-
-📝 ${games.description}
-  `);
-}
-
 function showGameModal(id) {
   const game = allGames.find((g) => g.id == id);
   if (!game) return;
@@ -144,7 +130,7 @@ function showGameModal(id) {
         <li><span class="fact-label">Spilletid</span> ${game.playtime} min</li>
         <li><span class="fact-label">Sværhedsgrad</span> ${game.difficulty}</li>
         <li><span class="fact-label">Spillere</span> ${game.players.min}–${game.players.max}</li>
-        <li><span class="fact-label">Bedømmelse</span> ${game.rating}/5</li>
+        <li><span class="fact-label">Bedømmelse</span> ${game.rating} ud af 5</li>
         <li><span class="fact-label">Sprog</span> ${game.language}</li>
         <li><span class="fact-label">Hylde</span> ${game.shelf}</li>
       </ul>
