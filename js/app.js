@@ -229,6 +229,7 @@ function filterGames() {
 
 // Event listeners til alle filtre
 document.addEventListener("DOMContentLoaded", () => {
+  if (!document.querySelector(".game-list-all")) return;
   getGames();
 
   // Event listener til søgning
