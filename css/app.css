@@ -302,29 +302,29 @@ footer {
 
 /* Filter bar */
 .filter-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 12px 16px;
-  gap: 8px;
   position: fixed;
-  top: 80px;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-  width: 100%;
-  box-sizing: border-box;
-  z-index: 999;
+  bottom: 16px;
+  left:50%;
+  transform: translateX(-50%);
+  z-index:10;
+}
+
+#open-filter {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 16px;
+  background: var(--brand-red);
+  color: #fff;
+  font-family: var(--paragraph-font-family);
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 .main-content {
-  padding-top: 180px;
-  padding-bottom: 80px;
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
+  padding: 0 24px 24px;
 }
 
 
@@ -337,37 +337,6 @@ footer {
   font-size: 14px;
   cursor: pointer;
 }
-
-
-/*Vestergade & alle spil sektion*/
-
-/* --- CONTAINER --- */
-main {
-  padding-top: 0;
-  position: relative;
-}
-
-/* --- SEKTIONER --- */
-.location-section {
-  margin-bottom: 18px;
-  display: flex;
-  justify-content: space-between;
-  padding: 24px 16px;
-  flex-direction: column;
-  gap: 6px
-  
-}
-
-.location-header {
-  font-family: var(--header-font-family);
-  font-size: 28px;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 16px;
-  flex-direction: row
-}
-
-
 
 /* --- ALLE SPIL (grid) --- */
 .game-list-all {
