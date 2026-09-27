@@ -23,32 +23,19 @@
   /* Text styles */
   --header-font-family: "Luckiest Guy", sans-serif;
   --paragraph-font-family: "Figtree", sans-serif;
-  --tag-font-family: "Figtree", sans-serif;
   --card-fontsize-header-1: 14px;
   --header-color: #3C342F;
-  --description-fontsize-header-1: 32px;
-  --description-fontsize-header-2: 16px;
-  --description-fontsize-header-3: 12px;
   --description-fontsize-paragraph: 16px;
-  --tag-fontsize: 0.875rem;
-  --rating-desciption-fontsize: 6px;
-  --rating-card-fontsize: 12px;
   --spilgalleri-titel-fontsize: 20px;
-  --spilgalleri-header-2-fontsize: 17px;
+  --brand-red: #E0201F;
+  --brand-green: #29503B;
 
   /* index standards */
   --page-background-color: #F8F5F1;
 
   /* Color styles */
   --card-background-color: #fafafa;
-  --tag-background-color: #f8f8f8;
-  --tag-border-color: #e0e0e0;
-  --rating-yellow-gradient: linear-gradient(
-    to bottom,
-    #e6cd53 16%,
-    #ffe35a 51%,
-    #e6cd53 88%
-  );
+
 
   /* effect styles */
   --shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
@@ -173,64 +160,6 @@ transform: scale(1.02);
   overflow: hidden;
 }
 
-/* Rating på billede */
-.rating {
-  display: inline-flex;
-  padding: 4px 8px 4px 4px;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  border-radius: 0 16px 16px 0;
-  background: var(--rating-yellow-gradient);
-  box-shadow: var(--shadow);
-  z-index: 20;
-}
-
-.rating p {
-  font-family: var(--tag-font-family);
-  font-size: var(--rating-card-fontsize);
-  color: black;
-}
-
-/* Aldersgrænse på billede */
-.age {
-  display: inline-flex;
-  padding: 4px 12px 4px 8px;
-  justify-content: flex-end;
-  align-items: flex-start;
-  gap: 8px;
-  border-radius: 16px 0 0 16px;
-  background: var(--card-background-color);
-  z-index: 20;
-}
-
-.age p {
-  font-family: var(--tag-font-family);
-  font: var(--rating-card-fontsize);
-  color: black;
-}
-
-/* Sværhedsgrad på billede */
-.difficulty {
-  display: inline-flex;
-  padding: 4px 8px 4px 4px;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  border-radius: 0 16px 16px 0;
-  background: var(--card-background-color);
-  box-shadow: var(--shadow);
-  z-index: 20;
-  position: absolute;
-  bottom: 135px;
-  left: 0;
-}
-
-.difficulty p {
-  font-family: var(--tag-font-family);
-  font: var(--rating-card-fontsize);
-  color: black;
-}
 
 /* Billede af brætspil */
 .game-image {
@@ -256,21 +185,6 @@ transform: scale(1.02);
   gap: 4px;
 }
 
-.difficulty-tag {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #e0e0e0;
-  color: #333;
-  font-family: var(--tag-font-family);
-  font-size: var(--tag-fontsize);
-  padding: 4px 10px;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  z-index: 20;
-  font-weight: bold;
-  text-transform: capitalize;
-}
 
 
 /* Card titel front page */
@@ -392,16 +306,6 @@ footer {
   transform: translateY(-2px);
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  font-size: 14px;
-}
 
 /* fade-ind effekt */
 .location {
@@ -430,27 +334,6 @@ footer {
   height: 56px;
 }
 
-.title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.navbar .back-btn a {
-  list-style: none;
-  text-decoration: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: black;
-}
-
-.search-btn {
-  background: none;
-  border: none;
-  font-size: 1.3rem;
-  cursor: pointer;
-}
 
 /* Filter bar */
 .filter-bar {
@@ -479,14 +362,6 @@ footer {
   justify-content: center;
 }
 
-.dropbtn {
-  background-color: #e9dfd7;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 0.95rem;
-  cursor: pointer;
-}
 
 .filter-group select {
   background-color: #e9dfd7;
@@ -498,10 +373,6 @@ footer {
   cursor: pointer;
 }
 
-/* Show dropdown on click */
-.show {
-  display: block;
-}
 
 /*Vestergade & alle spil sektion*/
 
@@ -586,9 +457,7 @@ main {
     font-size: 22px;
   }
 
-  .game-scroll .game-card {
-    width: 180px;
-  }
+
 
   .game-list-all {
     display: grid;
@@ -597,15 +466,7 @@ main {
   }
 
 
-/* =====================
-   SPIL GRID & CARDS
-   ===================== */
-#game-list-all {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  padding: 10rem 0;
-}
+
 
 /* ====== DIALOG ====== */
 #game-dialog {
@@ -648,9 +509,6 @@ main {
   flex-direction: column;
 }
 
-.modal{
-  margin-top: 100px;
-}
 
 .dialog-details h2 {
   font-size: 2rem;
@@ -669,36 +527,6 @@ main {
   line-height: 1.6;
 }
 
-/*Sværhedgrads knap på Dialog*/
-
-.dialog-tags {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.dialog-tags .difficulty-tag {
-  padding: 4px 12px;
-  border-radius: 16px;
-  font-family: var(--tag-font-family);
-  font-size: var(--tag-fontsize);
-  font-weight: bold;
-  color: white;
-}
-
-/* Difficulty colors */
-.difficulty-easy {
-  background-color: #4CAF50; 
-}
-
-.difficulty-medium {
-  background-color: #FFC107;  
-  color: #333 !important;     
-}
-
-.difficulty-hard {
-  background-color:#F44336; 
-}
 
 footer {
   font-family: var(--paragraph-font-family);
