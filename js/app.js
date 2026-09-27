@@ -95,7 +95,7 @@ function displayGame(game) {
     <h2 class="card-titel"><button type="button" class="card-open-btn" ${getTitleLangAttr(game.title)}>${game.title}</button></h2>
     <ul class="tag-list" role="list">
       <li class="tags">${game.age}+ år</li>
-      <li class="tags">Bedømmelse <span aria-hidden="true">${game.rating}/5</span><span class="visually-hidden">${danskRating} ud af 5</span></li>
+      <li class="tags">Bedømmelse ${game.rating} af 5</li>
       <li class="tags">Sværhedsgrad ${game.difficulty}</li>
       <li class="tags">Genre ${game.genre}</li>
       <li class="tags">Spilletid ${game.playtime} min</li>
