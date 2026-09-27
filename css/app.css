@@ -1,10 +1,31 @@
 /* this is updated */
+@font-face {
+  font-family: "Luckiest Guy";
+  src: url("../fonts/luckiest-guy-v25-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("../fonts/figtree-v9-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("../fonts/figtree-v9-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
 :root {
   /* Text styles */
-  --header-font-family: "poppins";
-  --paragraph-font-family: "montserrat";
-  --tag-font-family: "roboto mono";
+  --header-font-family: "Luckiest Guy", sans-serif;
+  --paragraph-font-family: "Figtree", sans-serif;
+  --tag-font-family: "Figtree", sans-serif;
   --card-fontsize-header-1: 14px;
+  --header-color: #3C342F;
   --description-fontsize-header-1: 32px;
   --description-fontsize-header-2: 16px;
   --description-fontsize-header-3: 12px;
@@ -14,6 +35,9 @@
   --rating-card-fontsize: 12px;
   --spilgalleri-titel-fontsize: 20px;
   --spilgalleri-header-2-fontsize: 17px;
+
+  /* index standards */
+  --page-background-color: #F8F5F1;
 
   /* Color styles */
   --card-background-color: #fafafa;
@@ -31,10 +55,16 @@
   --transition: 250ms ease;
 }
 
-
 .spilgalleri-titel {
   font-family: var(--header-font-family);
   font-size: var(--spilgalleri-titel-fontsize);
+}
+
+/* Headings */
+
+h2 {
+  color: var(--header-color);
+  
 }
 
 /* Card in general */
@@ -202,26 +232,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: var(--page-background-color);
   position: relative;
-}
-
-/* Baggrundsbilledet */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../img/forsidebaggrund.jpg");
-  background-size: cover;
-  background-position:center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  opacity: 0.2;
-  z-index: -1;
-  pointer-events: none;
 }
 
 .splash-screen {
@@ -663,7 +675,6 @@ list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4p
   border-radius: 24px;
   background: #f8f5f0;
   color: #3c342f;
-  font-weight: 600;
   cursor: pointer;
 }
 
@@ -693,7 +704,6 @@ list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4p
   display: block;
   margin-bottom: 4px;
   font-size: 0.875rem;
-  font-weight: 500;
   color: #665b52;
 }
 
@@ -719,4 +729,5 @@ list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4p
   outline: 3px solid #3c342f;
   outline-offset: 4px;
 }
+
 
