@@ -88,7 +88,7 @@ function displayGame(game) {
   const gameHTML = `
  <article class="game-card" data-id="${game.id}">
   <div class="top-card">
-    <img src="${game.image}" alt="" class="game-image" />
+    <img src="${game.image}" alt="" class="game-image" loading="lazy" />
   </div>
   <div class="bottom-card">
     <h2 class="card-titel"><button type="button" class="card-open-btn" ${getTitleLangAttr(game.title)}>${game.title}</button></h2>
