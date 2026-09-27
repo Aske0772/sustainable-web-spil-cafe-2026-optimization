@@ -4,14 +4,6 @@
    SPILGALLERI (navbar, dialog osv.)
    ========================== */
 
-// Back button (sikker måde)
-const backBtn = document.querySelector(".back-btn");
-if (backBtn) {
-  backBtn.addEventListener("click", () => {
-    window.location.href = "../index.html";
-  });
-}
-
 let allGames = [];
 
 // sørger for at engelske spil henter en som sprog og ikke da
