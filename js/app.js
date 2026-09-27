@@ -84,7 +84,6 @@ function displayGames(games) {
 function displayGame(game) {
   const gameList = document.querySelector(".game-list-all");
   if (!gameList) return;
-  const danskRating = String(game.rating).replace(".", ",");
 
   const gameHTML = `
  <article class="game-card" data-id="${game.id}">
@@ -119,7 +118,6 @@ function displayGame(game) {
 function showGameModal(id) {
   const game = allGames.find((g) => g.id == id);
   if (!game) return;
-  const danskRating = String(game.rating).replace(".", ",");
 
   document.querySelector("#dialog-content").innerHTML = /*html*/ `
 
@@ -151,10 +149,12 @@ function showGameModal(id) {
 }
 
 // Luk dialog på klik af X
-document.querySelector("#close-dialog").addEventListener("click", () => {
-  document.querySelector("#game-dialog").close();
-});
-
+const closeDialog = document.querySelector("#close-dialog");
+if (closeDialog) {
+  closeDialog.addEventListener("click", () => {
+    document.querySelector("#game-dialog").close();
+  });
+}
 // Dropdown-menu //// Åbn/luk dropdowns
 
 
