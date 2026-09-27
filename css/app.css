@@ -222,14 +222,10 @@ body {
 }
 
 footer {
-  position: fixed; /* Footer fastlåses i forhold til viewport */
-  bottom: 0; /* Lige ved bunden */
-  left: 50%; /* Flytter venstre kant til midten */
-  transform: translateX(-50%); /* Center footer horisontalt */
-  color: black; /* Tekstfarve */
-  padding: 10px 20px; /* Indvendig margin */
-  text-align: center; /* Tekst centreret */
-  font-size: 14px; /* Valgfri størrelse */
+  padding: 16px 16px 112px;
+  text-align: center;
+  font-family: var(--paragraph-font-family);
+  font-size: 14px;
 }
 
 /*LOCATIONSIDE*/
@@ -285,18 +281,62 @@ footer {
 /*SPILGALLERISIDE*/
 /*Navbar*/
 .navbar {
-  display: flex;
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: white;
-  border-bottom: 1px solid #eee;
-  z-index: 1000;
-  height: 56px;
+  gap: 16px 8px;
+  padding: 8px 24px 24px;
+}
+
+.header-logo {
+  width: 48px;
+  height: auto;
+}
+
+/* "vælg café" button */
+.back-btn {
+  grid-column: 1 / 1-;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: var(--brand-red);
+  color: #FFF;
+  font-family: var(--paragraph-font-family);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* SEARCHBAR */
+.search-group {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.search-group label {
+  font-family: var(--paragraph-font-family);
+  font-weight: 700;
+  color: var(--header-color);
+}
+
+#search-input {
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid #88768b;
+  border-radius: 8px;
+  background; #fff;
+  font-family: var(--paragraph-font-family);
+  font-size: 1rem;
+}
+
+/* Focus visible "vælg cafe / filter / searchbar" */
+.back-btn:focus-visible, #open-filter:focus-visible, #search-input:focus-visible {
+  outline: 3px solid var(--header-color);
+  outline-offset: 3px;
 }
 
 
