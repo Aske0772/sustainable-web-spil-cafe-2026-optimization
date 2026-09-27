@@ -270,7 +270,7 @@ footer {
 .location h2 {
   color: #000;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--paragraph-font-family);
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -292,7 +292,7 @@ footer {
   background: #ebdfd7;
   color: #000;
   font-size: 36px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--paragraph-font-family);
   font-weight: 400;
   text-decoration: none;
   border-radius: 15px;
@@ -475,11 +475,8 @@ main {
   border: none;
   border-radius: 16px;
   background: var(--card-background-color);
-  color: var(--description-fontsize-paragraph);
-  box-shadow: var(--shadow-lg);
   padding: 20px;
   overflow: hidden;
-  animation: fadeIn 0.3s ease;
 }
 
 #game-dialog::backdrop {
@@ -563,7 +560,7 @@ footer {
   background: #eee8df;
   border: 1px solid #d9cfc3;
   border-radius: 10px;
-  font: var(--paragraph-font-family);
+  font-family: var(--paragraph-font-family);
   font-size: 1.125rem;
   font-weight: 700;
   color: #3c342f;
