@@ -85,6 +85,26 @@ function displayGame(game) {
   const gameList = document.querySelector(".game-list-all");
   if (!gameList) return;
 
+  let languageBadge;
+
+  if (game.language === "Dansk") {
+    languageBadge = `<li class="badge badge-icon"><img src="../img/svg-icons/danish-language-icon.svg" alt="Sprog: dansk"></li>`;
+  } else if (game.language === "English") {
+    languageBadge = `<li class="badge badge-icon"><img src="../img/svg-icons/english-language-icon.svg" alt="Sprog: engelsk"></li>`;
+  } else {
+    languageBadge = `<li class="badge"><span class="visually-hidden">Sprog: </span>${game.language}</li>`;
+  }
+
+    let difficultyClass;
+
+  if (game.difficulty === "Let") {
+    difficultyClass = "badge-let";
+  } else if (game.difficulty === "Mellem") {
+    difficultyClass = "badge-mellem";
+  } else {
+    difficultyClass = "badge-svaer";
+  }
+
   const gameHTML = `
  <article class="game-card" data-id="${game.id}">
   <div class="top-card">
@@ -92,17 +112,18 @@ function displayGame(game) {
   </div>
   <div class="bottom-card">
     <h2 class="card-titel"><button type="button" class="card-open-btn" ${getTitleLangAttr(game.title)}>${game.title}</button></h2>
-    <ul class="tag-list" role="list">
-      <li class="tags">${game.age}+ år</li>
-      <li class="tags">Bedømmelse ${game.rating} af 5</li>
-      <li class="tags">Sværhedsgrad ${game.difficulty}</li>
-      <li class="tags">Genre ${game.genre}</li>
-      <li class="tags">Spilletid ${game.playtime} min</li>
-      <li class="tags">Spillere ${game.players.min}–${game.players.max}</li>
-      <li class="tags">Sprog ${game.language}</li>
-      <li class="tags">Hylde ${game.shelf}</li>
+ <ul class="card-badges" role="list">
+      ${languageBadge}
+      <li class="badge ${difficultyClass}"><span class="visually-hidden">Sværhedsgrad: </span>${game.difficulty}</li>
     </ul>
     <p class="card-description">${game.description}</p>
+    <ul class="tag-list" role="list">
+      <ul class="fact-list" role="list">
+        <li><span class="fact-label">Genre</span> ${game.genre}</li>
+        <li><span class="fact-label">Alder</span> ${game.age}+ år</li>
+        <li><span class="fact-label">Spilletid</span> ${game.playtime} min</li>
+        <li><span class="fact-label">Spillere</span> ${game.players.min}–${game.players.max}</li>
+      </ul>
   </div>
 </article>
   `;

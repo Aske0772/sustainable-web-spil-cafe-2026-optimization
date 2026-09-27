@@ -90,6 +90,67 @@ cursor: pointer; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 transform: scale(1.02);
 }
 
+/* card badges language */
+.card-badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Card badge difficulty */
+.badge {
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--header-color);
+  border: 1px solid #d9cfc3;
+  font-family: var(--paragraph-font-family);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+/* badge outer stroke */
+.badge-icon {
+  padding: 4px;
+  line-height: 0;
+}
+
+/* bade image size */
+.badge-icon img {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+/* Cards tag - before opening */
+
+
+.card-description {
+  font-family: var(--paragraph-font-family);
+  font-size: 14px;
+  margin: 8px 0 0;
+}
+
+/* Card badge difficulty color */
+.badge-let {
+  background: #D9F2D0;
+}
+
+.badge-mellem {
+  background: #FBEAB8;
+}
+
+.badge-svaer {
+  background: #F9D3CF;
+}
+
 
 /* kort Btn. border styling */
 .card-open-btn {
@@ -99,7 +160,7 @@ transform: scale(1.02);
   margin: 0;
   font: inherit;
   color: inherit;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -212,16 +273,26 @@ transform: scale(1.02);
 }
 
 
-
+/* Card titel front page */
 .card-titel {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   align-self: stretch;
+  text-align: center;
   font-family: var(--header-font-family);
   font-size: var(--card-fontsize-header-1);
   margin: 0;
   padding: 0;
+}
+
+/* Text for card description */
+.card-description {
+  font-family: var(--paragraph-font-family);
+  font-size: 14px;
+  margin: 8px 0 0;
+  align-self: stretch;
+  text-align: center;
 }
 
 /* FORSIDE */
@@ -633,36 +704,6 @@ footer {
   font-family: var(--paragraph-font-family);
 }
 
-/* Cards tag - before opening */
-
-/* Tag rules for CARDS non-dialog front page */
-.tag-list { 
-list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px;
-}
-
-.tags {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 8px;
-  border-radius: 16px;
-  border: 0.5px solid var(--tag-border-color);
-  background: var(--card-background-color);
-  box-shadow: var(--shadow);
-  font-family: var(--tag-font-family);
-  font-size: var(--tag-fontsize);
-  font-weight: 700;
-  letter-spacing: -0.11px;
-}
-
-.card-description {
-  font-family: var(--paragraph-font-family);
-  font-size: 14px;
-  margin: 8px 0 0;
-}
-
-/* Cards dialog */
-
 /* Close btn for dialog */
 #close-dialog {
   position: absolute;
@@ -694,6 +735,7 @@ list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4p
   background: #eee8df;
   border: 1px solid #d9cfc3;
   border-radius: 10px;
+  font: var(--paragraph-font-family);
   font-size: 1.125rem;
   font-weight: 700;
   color: #3c342f;
@@ -730,4 +772,12 @@ list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4p
   outline-offset: 4px;
 }
 
-
+/* hidden for screenreader  */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
