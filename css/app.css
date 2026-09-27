@@ -25,7 +25,6 @@
   --paragraph-font-family: "Figtree", sans-serif;
   --card-fontsize-header-1: 14px;
   --header-color: #3C342F;
-  --description-fontsize-paragraph: 16px;
   --spilgalleri-titel-fontsize: 20px;
   --brand-red: #E0201F;
   --brand-green: #29503B;
@@ -117,13 +116,6 @@ transform: scale(1.02);
 }
 
 /* Cards tag - before opening */
-
-
-.card-description {
-  font-family: var(--paragraph-font-family);
-  font-size: 14px;
-  margin: 8px 0 0;
-}
 
 /* Card badge difficulty color */
 .badge-let {
@@ -219,6 +211,8 @@ body {
   align-items: center;
   background-color: var(--page-background-color);
   position: relative;
+  /* stops browser from making a fake "fat" font - luckiest guy only has weight 400 */
+  font-synthesis: none;
 }
 
 .splash-screen {

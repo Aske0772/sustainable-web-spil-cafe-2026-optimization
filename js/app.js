@@ -1,52 +1,14 @@
 "use strict";
 
 /* ==========================
-   INDEX (splash screen)
-   ========================== */
-if (document.querySelector(".splash-screen")) {
-  document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.querySelector(".logo");
-    const splash = document.querySelector(".splash-screen");
-
-    // Logo-animation
-    setTimeout(() => logo.classList.add("animate"), 800);
-
-    // Fade ud efter 2.5 sekunder
-    setTimeout(() => splash.classList.add("fade-out"), 2500);
-
-    // Skift til location.html efter 3.5 sekunder
-    setTimeout(() => {
-      window.location.href = "sites/location.html";
-    }, 3500);
-  });
-}
-
-/* ==========================
-   LOCATION (fade in)
-   ========================== */
-
-if (document.querySelector(".location")) {
-  document.addEventListener("DOMContentLoaded", () => {
-    const locationSection = document.querySelector(".location");
-
-    // Fade ind
-    setTimeout(() => locationSection.classList.add("fade-in"), 100);
-  });
-}
-
-/* ==========================
    SPILGALLERI (navbar, dialog osv.)
    ========================== */
-
-if (document.querySelector(".spilgalleri-titel")) {
-  console.log("🎮 Spilgalleri loaded");
-}
 
 // Back button (sikker måde)
 const backBtn = document.querySelector(".back-btn");
 if (backBtn) {
   backBtn.addEventListener("click", () => {
-    window.location.href = "../sites/location.html";
+    window.location.href = "../index.html";
   });
 }
 
@@ -63,8 +25,6 @@ function getTitleLangAttr(title) {
 async function getGames() {
   const response = await fetch("../data/games.json");
   allGames = await response.json();
-  console.log("📁 Games loaded:", allGames.length);
-  // populateCategoryDropdown(); // Remove or comment out if not implemented
   displayGames(allGames);
 }
 
@@ -108,7 +68,7 @@ function displayGame(game) {
   const gameHTML = `
  <article class="game-card" data-id="${game.id}">
   <div class="top-card">
-    <img src="${game.image}" alt="" class="game-image" loading="lazy" />
+    <img src="${game.image}" alt="" class="game-image"/>
   </div>
   <div class="bottom-card">
     <h2 class="card-titel"><button type="button" class="card-open-btn" ${getTitleLangAttr(game.title)}>${game.title}</button></h2>
@@ -117,7 +77,6 @@ function displayGame(game) {
       <li class="badge ${difficultyClass}"><span class="visually-hidden">Sværhedsgrad: </span>${game.difficulty}</li>
     </ul>
     <p class="card-description">${game.description}</p>
-    <ul class="tag-list" role="list">
       <ul class="fact-list" role="list">
         <li><span class="fact-label">Genre</span> ${game.genre}</li>
         <li><span class="fact-label">Alder</span> ${game.age}+ år</li>
