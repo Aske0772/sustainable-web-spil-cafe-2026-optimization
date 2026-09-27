@@ -84,6 +84,7 @@ function displayGames(games) {
 function displayGame(game) {
   const gameList = document.querySelector(".game-list-all");
   if (!gameList) return;
+  const danskRating = String(game.rating).replace(".", ",");
 
   const gameHTML = `
  <article class="game-card" data-id="${game.id}">
@@ -94,7 +95,7 @@ function displayGame(game) {
     <h2 class="card-titel"><button type="button" class="card-open-btn" ${getTitleLangAttr(game.title)}>${game.title}</button></h2>
     <ul class="tag-list" role="list">
       <li class="tags">${game.age}+ år</li>
-      <li class="tags">bedømmelse ${game.rating}/5</li>
+      <li class="tags">Bedømmelse <span aria-hidden="true">${game.rating}/5</span><span class="visually-hidden">${danskRating} ud af 5</span></li>
       <li class="tags">Sværhedsgrad ${game.difficulty}</li>
       <li class="tags">Genre ${game.genre}</li>
       <li class="tags">Spilletid ${game.playtime} min</li>
@@ -118,6 +119,7 @@ function displayGame(game) {
 function showGameModal(id) {
   const game = allGames.find((g) => g.id == id);
   if (!game) return;
+  const danskRating = String(game.rating).replace(".", ",");
 
   document.querySelector("#dialog-content").innerHTML = /*html*/ `
 

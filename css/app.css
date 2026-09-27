@@ -720,4 +720,13 @@ list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4p
   outline-offset: 4px;
 }
 
+/* Card rating - "ud af" "/" hidden */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 
