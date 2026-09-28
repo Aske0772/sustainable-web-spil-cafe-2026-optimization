@@ -666,3 +666,14 @@ footer {
 
 
 /* MEDIA RESPONSIVE DESIGN */
+
+/* Tablet 768px */
+
+/* 2 cards column */
+@media (min-width: 768px) {
+  .game-list-all {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
