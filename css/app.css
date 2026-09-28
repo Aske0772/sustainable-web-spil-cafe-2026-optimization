@@ -383,14 +383,122 @@ footer {
   padding: 0 24px 24px;
 }
 
-
-.filter-group select {
-  background-color: #e9dfd7;
+/* Dialog filter - size */
+#filter-dialog {
+  box-sizing:border-box;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100dvh;
+  margin-inline: 0;
+  padding: 24px;
+  background-color: var(--page-background-color);
   border: none;
-  appearance: none;
-  border-radius: 20px;
-  padding: 8px 30px 8px 12px;
-  font-size: 14px;
+}
+
+#filter-title {
+  margin: 0 0 24px;
+  font-size: 2rem;
+}
+
+/* Dialog filter - close button */
+.close-filter {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: none;
+  color: #000;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.filter-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Top filter */
+.filter-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 8px;
+  background: var(--brand-red);
+  color: #fff;
+  font-family: var(--paragraph-font-family);
+  font-size: 1rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* buttom filter */
+.filter-group select {
+  min-height: 44px;
+  border: none;
+  background: var(--brand-green);
+  color: #fff;
+  padding: 42px 8px 8px;
+  font-family: var(--paragraph-font-family);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+/* Dropdown-liste background */
+.filter-group option {
+  background: #fff;
+  color: var(--header-color);
+}
+
+/* Filter font */
+.result-count {
+  font-family: var(--paragraph-font-family);
+}
+
+/* filter result of filtering */
+#filter-dialog .result-count {
+  margin: 24px 0 8px;
+  padding-top: 24px;
+  border-top: 1px solid #88786b;
+  font-size: 1.125rem;
+}
+
+.show-games {
+  width: 100%;
+  min-height: 44px;
+  border: none;
+  border-radius: 8px;
+  background: var(--brand-red);
+  color: #fff;
+  font-family: var(--paragraph-font-family);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#reset-filter {
+  display: block;
+  margin: 24px auto 0;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #000;
+  color: #fff;
+  font-family: var(--paragraph-font-family);
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -552,7 +660,11 @@ footer {
 
 /* outline Styling for dialog and close dialog */
 #close-dialog:focus-visible,
-#game-dialog summary:focus-visible {
+#game-dialog summary:focus-visible,
+.filter-group select:focus-visible,
+.show-games:focus-visible,
+#reset-filter:focus-visible,
+.close-filter:focus-visible {
   outline: 3px solid #3c342f;
   outline-offset: 4px;
 }

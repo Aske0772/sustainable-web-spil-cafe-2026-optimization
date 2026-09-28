@@ -26,9 +26,14 @@
     <dialog id="filter-dialog" aria-labelledby="filter-title">
       
       <form method="dialog">
-        <button aria-label="Luk filter">Luk</button>
+        <button class="close-filter" aria-label="Luk filter">✕</button>
         <h2 id="filter-title">Filtrer spil</h2>
 
+        <div class="search-group" role="search">
+          <label for="search-input">Søg efter spil</label>
+          <input type="search" id="search-input-dialog" placeholder="f.eks. skak">
+        </div>
+      <div class="filter-grid">
       <div class="filter-group">
         <label for="genre-select">Genre</label>
         <select id="genre-select">
@@ -47,7 +52,7 @@
           <option value="Fliselægning">Fliselægning</option>
         </select>
       </div>
-
+      
       <div class="filter-group">
         <label for="age-select">Alder</label>
         <select id="age-select">
@@ -59,7 +64,7 @@
           <option value="18">18+</option>
         </select>
       </div>
-
+      
       <div class="filter-group">
         <label for="playtime-select">Spilletid</label>
         <select id="playtime-select">
@@ -75,7 +80,7 @@
           <option value="120">120+ min</option>
         </select>
       </div>
-
+      
       <div class="filter-group">
         <label for="difficulty-select">Sværhedsgrad</label>
         <select id="difficulty-select">
@@ -85,11 +90,12 @@
           <option value="Svær">Svær</option>
         </select>
       </div>
+      </div>
+      
 
       <p class="result-count" role="status"></p>
-
+      <button class="show-games">Vis spil</button>
       <button type="button" id="reset-filter">Nulstil filtre</button>
-      <button>Vis spil</button>
     </form>
   </dialog>
 

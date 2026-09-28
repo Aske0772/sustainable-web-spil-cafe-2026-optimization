@@ -193,7 +193,7 @@ function filterGames() {
   }
 
   // Vis de filtrerede spil på siden
-  const message = filteredGames.length === 0 ? "Ingen spil matcher, nulstil filtrene og prøv igen" : `${filteredGames.length} spil fundet`;
+  const message = filteredGames.length === 0 ? "Ingen spil matcher, nulstil filtrene og prøv igen" : `${filteredGames.length} spil matcher dine filtre`;
   document.querySelectorAll(".result-count").forEach((p) => (p.textContent = message));
   
   displayGames(filteredGames);
@@ -204,10 +204,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!document.querySelector(".game-list-all")) return;
   getGames();
 
-  // Event listener til søgning
+  // Event listener for dialog and nav searchbar
   document
     .querySelector("#search-input")
     .addEventListener("input", filterGames);
+
+    const searchInputs = document.querySelectorAll('input[type="search"]');
+    searchInputs.forEach((input) => {
+    input.addEventListener("input", () => {
+      searchInputs.forEach((other) => (other.value = input.value));
+      filterGames();
+    });
+  });
 
   // Event listeners til alle filter-dropdowns
   document
@@ -230,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("#filter-dialog select").forEach((select) => {
       select.value = "all";
     });
+    searchInputs.forEach((input) => (input.value = ""));
     filterGames();
 });
-
-});
+  });
