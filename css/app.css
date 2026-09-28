@@ -384,6 +384,10 @@ footer {
   padding: 0 24px 24px;
 }
 
+.main-content h2, .main-content .result-count {
+  text-align: center;
+}
+
 /* Dialog filter - size */
 #filter-dialog {
   box-sizing:border-box;
