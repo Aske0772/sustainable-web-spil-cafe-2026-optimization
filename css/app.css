@@ -503,7 +503,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  max-width: 1200px;
+
   margin: 0 auto;
   align-items: start;
   min-height: 100vh;
@@ -695,7 +695,7 @@ footer {
     grid-template-columns: 1fr auto;
     align-items: end;
     gap: 16px;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding-bottom: 12px;
     border-bottom: 1px solid var(--header-color);
@@ -760,6 +760,21 @@ footer {
   .filter-group select {
     min-height: 44px;
   }
+}
 
+/* desktop media query 1200 */
+
+@media (min-width: 1200px) {
+  .game-list-all {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* desktop media query 1600 */
+
+@media (min-width: 1600px) {
+  .game-list-all {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
