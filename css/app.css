@@ -53,6 +53,10 @@
 }
 
 .spilgalleri-titel {
+  grid-column: 2;
+  margin: 0;
+  text-align: center;
+  color: var(--header-color);
   font-family: var(--header-font-family);
   font-size: var(--spilgalleri-titel-fontsize);
 }
@@ -281,11 +285,16 @@ footer {
 /*SPILGALLERISIDE*/
 /*Navbar*/
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
   display: grid;
   grid-template-columns: 48px 1fr 48px;
   align-items: center;
-  gap: 16px 8px;
-  padding: 8px 24px 24px;
+  gap: 8px;
+  padding: 8px 24px 12px;
+  background-color: var(--page-background-color);
+  box-shadow: var(--shadow);
 }
 
 .header-logo {
