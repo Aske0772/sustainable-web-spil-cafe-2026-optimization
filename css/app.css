@@ -23,7 +23,7 @@
   /* Text styles */
   --header-font-family: "Luckiest Guy", sans-serif;
   --paragraph-font-family: "Figtree", sans-serif;
-  --card-fontsize-header-1: 3rem;
+  --card-fontsize-header-1: 2.25rem;
   --header-color: #3C342F;
   --spilgalleri-titel-fontsize: 20px;
   --brand-red: #E0201F;
@@ -525,6 +525,7 @@ footer {
   border: none;
   color: #fff;
   text-align: center;
+  overflow-wrap: anywhere;
 }
 
 .game-card .fact-label {
