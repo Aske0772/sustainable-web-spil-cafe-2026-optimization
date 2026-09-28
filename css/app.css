@@ -33,7 +33,7 @@
   --page-background-color: #F8F5F1;
 
   /* Color styles */
-  --card-background-color: #fafafa;
+  --card-background-color: #fff;
 
 
   /* effect styles */
@@ -210,6 +210,7 @@ transform: scale(1.02);
   font-size: var(--card-fontsize-header-1);
   margin: 0;
   padding: 0;
+  overflow-wrap: anywhere;
 }
 
 /* Text for card description */
