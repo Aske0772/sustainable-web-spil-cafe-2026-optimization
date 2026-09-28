@@ -205,10 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
   getGames();
 
   // Event listener for dialog and nav searchbar
-  document
-    .querySelector("#search-input")
-    .addEventListener("input", filterGames);
-
     const searchInputs = document.querySelectorAll('input[type="search"]');
     searchInputs.forEach((input) => {
     input.addEventListener("input", () => {
