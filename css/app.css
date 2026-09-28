@@ -604,13 +604,14 @@ footer {
 /* Fact-list styling */
 .fact-list li {
   padding: 11px 13px;
-  background: #eee8df;
-  border: 1px solid #d9cfc3;
+  background: var(--brand-green);
   border-radius: 10px;
   font-family: var(--paragraph-font-family);
   font-size: 1.125rem;
   font-weight: 700;
-  color: #3c342f;
+  color: #fff;
+  text-align: center;
+  overflow-wrap: anywhere;
 }
 
 /* styling for factlabel */
@@ -618,7 +619,8 @@ footer {
   display: block;
   margin-bottom: 4px;
   font-size: 0.875rem;
-  color: #665b52;
+  font-weight: 400;
+  color: #fff;
 }
 
 .game-card .fact-list {
@@ -627,19 +629,6 @@ footer {
   padding: 12px;
   border-radius: 12px;
   background: var(--page-background-color)
-}
-
-.game-card .fact-list li {
-  background: var(--brand-green);
-  border: none;
-  color: #fff;
-  text-align: center;
-  overflow-wrap: anywhere;
-}
-
-.game-card .fact-label {
-  color: #FFF;
-  font-weight: 400;
 }
 
 /* About / Rules for game */
