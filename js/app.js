@@ -117,6 +117,12 @@ function showGameModal(id) {
   `;
 
   document.querySelector("#game-dialog").showModal();
+  // "vis regler" in dialog scrolls to text 
+  const rulesDetails = document.querySelector("#dialog-content details");
+  rulesDetails.addEventListener("toggle", () => {
+    if (rulesDetails.open) rulesDetails.scrollIntoView({ block: "nearest" });
+  });
+  // requesting to focus title instead of close dialog btn
   requestAnimationFrame(() => document.querySelector("#dialog-title").focus());
 }
 

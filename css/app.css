@@ -227,6 +227,7 @@ transform: scale(1.02);
 body {
   margin: 0;
   background-color: var(--page-background-color);
+  font-family: var(--paragraph-font-family);
   /* stops browser from making a fake "fat" font - luckiest guy only has weight 400 */
   font-synthesis: none;
 }
@@ -431,17 +432,12 @@ footer {
 
 /* Top filter */
 .filter-group label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: 10px 8px;
   background: var(--brand-red);
   color: #fff;
   font-family: var(--paragraph-font-family);
   font-size: 1rem;
   text-align: center;
-  pointer-events: none;
 }
 
 /* buttom filter */
@@ -450,7 +446,7 @@ footer {
   border: none;
   background: var(--brand-green);
   color: #fff;
-  padding: 42px 8px 8px;
+  padding: 8px;
   font-family: var(--paragraph-font-family);
   font-size: 1rem;
   font-weight: 700;
