@@ -61,11 +61,14 @@
   font-size: var(--spilgalleri-titel-fontsize);
 }
 
+/* HTML */
+
+
 /* Headings */
 
 h2 {
   color: var(--header-color);
-  
+  font-family: var(--header-font-family);
 }
 
 /* Card in general */
@@ -289,7 +292,8 @@ footer {
   top: 0;
   z-index: 5;
   display: grid;
-  grid-template-columns: 48px 1fr 48px;
+  grid-template-columns: 48px 1fr auto;
+  justify-content: center;
   align-items: center;
   gap: 8px;
   padding: 8px 24px 12px;
@@ -304,7 +308,6 @@ footer {
 
 /* "vælg café" button */
 .back-btn {
-  grid-column: 1 / 1-;
   justify-content: center;
   display: inline-flex;
   align-items: center;
@@ -313,6 +316,7 @@ footer {
   border-radius: 8px;
   background: var(--brand-red);
   color: #FFF;
+  white-space: nowrap;
   font-family: var(--paragraph-font-family);
   font-weight: 700;
   text-decoration: none;
@@ -335,9 +339,9 @@ footer {
 #search-input {
   min-height: 44px;
   padding: 0 12px;
-  border: 1px solid #88768b;
+  border: 1px solid #88786b;
   border-radius: 8px;
-  background; #fff;
+  background: #fff;
   font-family: var(--paragraph-font-family);
   font-size: 1rem;
 }
@@ -435,10 +439,6 @@ footer {
     padding: 8px;
   }
 }
-
-  .location-section h2 {
-    font-size: 22px;
-  }
 
 
 
@@ -584,3 +584,6 @@ footer {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+
+/* MEDIA RESPONSIVE DESIGN */
