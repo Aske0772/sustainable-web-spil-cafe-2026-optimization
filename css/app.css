@@ -62,7 +62,9 @@
 }
 
 /* HTML */
-
+html {
+  scroll-padding: 150px;
+}
 
 /* Headings */
 
@@ -394,14 +396,13 @@ footer {
 /* --- ALLE SPIL (grid) --- */
 .game-list-all {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: 1fr;
+  gap: 24px;
   padding: 16px;
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
-  justify-items: stretch;
   align-items: start;
+  min-height: 100vh;
 }
 
 .top-card img {
@@ -414,39 +415,7 @@ footer {
   background: #fff;   /* optional: gives a background if image is not full */
 }
 
-/* --- RESPONSIVE --- */
 
-/*@media (max-width: 768px) {
-  main {
-    margin: 20px;
-    padding: 20px;
-  }*/
-
-  @media screen and (max-width: 768px) {
-  .game-list-all {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    gap: 16px;
-    padding: 12px;
-  }
-
-  .top-card {
-    height: 140px; /* Slightly smaller images on mobile */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .game-list-all {
-    padding: 8px;
-  }
-}
-
-
-
-  .game-list-all {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 16px;
-  }
 
 
 
