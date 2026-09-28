@@ -339,7 +339,7 @@ footer {
   color: var(--header-color);
 }
 
-#search-input {
+#search-input, #search-input-dialog {
   min-height: 44px;
   padding: 0 12px;
   border: 1px solid #88786b;
@@ -350,7 +350,7 @@ footer {
 }
 
 /* Focus visible "vælg cafe / filter / searchbar" */
-.back-btn:focus-visible, #open-filter:focus-visible, #search-input:focus-visible {
+.back-btn:focus-visible, #open-filter:focus-visible, #search-input:focus-visible, #search-input-dialog:focus-visible {
   outline: 3px solid var(--header-color);
   outline-offset: 3px;
 }
