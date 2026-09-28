@@ -84,12 +84,12 @@ h2 {
   background: var(--card-background-color);
   box-shadow: var(--shadow);
   z-index: 1;
+  transition: transform 400ms ease, box-shadow 400ms ease;
 }
 
 .game-card:focus-within {
   outline: 3px solid #0057ff;
   outline-offset: 2px;
-  transition: transform 400ms ease, box-shadow 400ms ease;
 }
 .game-card:hover {
 cursor: pointer; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
